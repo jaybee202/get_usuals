@@ -18,7 +18,6 @@ else:
 for program in program_dict.keys():
     print('Fetching {}...'.format(program.capitalize()))
     webdriver = Firefox()
-    response = webdriver.request('GET', 'https://www.google.com/')
     webdriver.get(program_dict[program])
     input('Press any key to continue...')
     webdriver.quit()
